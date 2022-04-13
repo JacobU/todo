@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->date('due_date'); 
+            $table->string('due_date'); 
             $table->boolean('is_complete');
             $table->timestamps();
         });

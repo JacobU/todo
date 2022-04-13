@@ -39,8 +39,8 @@ class TodoTest extends TestCase
         ]);
         $response_post->assertStatus(201);
         
+        //Name is missing
         $response_bad_post = $this->postJson('/todo', [
-            'name' => 'test_name',
             'description' => 'test_description',
             'due_date' => 'wrongformatdate',
             'is_complete' => 'true',

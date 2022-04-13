@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Todo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Validator;
 
 class TodoController extends Controller
 {
@@ -30,6 +31,7 @@ class TodoController extends Controller
             'due_date' => $request->due_date,
             'is_complete' => $request->is_complete,
         ]);
+        
         return response($single_todo, 201);
     }
 
